@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Comprobante de Pago</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>¡Pago Exitoso!</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Nombre:</strong> {{ name }}</p>
+      <p><strong>Correo:</strong> {{ email }}</p>
+      <p><strong>Dirección:</strong> {{ address }}</p>
+      <p><strong>Total Pagado:</strong> {{ total | currency:'USD' }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button expand="full" color="success" [routerLink]="'/'">Finalizar</ion-button>
+</ion-content>

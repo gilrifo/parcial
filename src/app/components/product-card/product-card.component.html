@@ -1,0 +1,12 @@
+<ion-card (click)="goToDetails()">
+  <img [src]="product.image" alt="Product Image">
+  
+  <ion-card-content>
+    <h3>{{ product.title | slice:0:20 }}...</h3>
+    <p>{{ product.category }}</p>
+    <ion-text color="warning">
+      <ion-icon name="star"></ion-icon> {{ product.rating.rate }}
+    </ion-text>
+    <h2>${{ product.price }}</h2>
+  </ion-card-content>
+</ion-card>

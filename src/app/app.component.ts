@@ -4,8 +4,15 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
-  standalone: false,
+  standalone:false
 })
 export class AppComponent {
-  constructor() {}
+  loading: boolean = true; 
+
+  constructor() {
+    
+    setTimeout(() => {
+      this.loading = false;
+    }, 3000);
+  }
 }
